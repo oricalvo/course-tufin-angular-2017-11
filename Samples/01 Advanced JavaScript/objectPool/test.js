@@ -1,10 +1,13 @@
-const pool1 = new common.ObjectPool();
+var pool1 = new common.ObjectPool();
+var pool2 = new common.ObjectPool();
 
-const obj1 = {
+console.log("is the same", pool1.add == pool2.add);
+
+var obj1 = {
     id: 1,
 };
 
-const obj2 = {
+var obj2 = {
     id: 1,
 };
 
@@ -18,3 +21,9 @@ const res = pool1.take();
 console.log(res == obj1); //true
 
 console.log(pool1.take()); //null
+
+function Dummy() {
+}
+
+var d = new Dummy();
+d.pool1 = pool1;
