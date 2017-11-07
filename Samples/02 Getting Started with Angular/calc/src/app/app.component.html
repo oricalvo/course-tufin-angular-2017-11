@@ -1,0 +1,12 @@
+<div class="inputs">
+  <input [(ngModel)]="num1">
+  +
+  <input [(ngModel)]="num2">
+  =
+  <span>{{result}}</span>
+</div>
+
+<div>
+  <button (click)="calc()">Calc</button>
+  <button (click)="reset()">Reset</button>
+</div>

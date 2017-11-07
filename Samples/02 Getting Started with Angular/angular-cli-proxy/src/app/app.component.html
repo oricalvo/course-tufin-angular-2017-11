@@ -1,0 +1,9 @@
+<input [(ngModel)]="name">
+<button (click)="add()">Add</button>
+
+<ul>
+  <li *ngFor="let contact of contacts; let i=index">
+    <span>{{contact.name}}</span>
+    <button (click)="remove(contact, i)">Delete</button>
+  </li>
+</ul>

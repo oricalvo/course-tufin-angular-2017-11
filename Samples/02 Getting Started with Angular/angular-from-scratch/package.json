@@ -1,0 +1,16 @@
+{
+  "scripts": {
+    "webpack": "webpack --watch"
+  },
+  "dependencies": {
+    "@angular/common": "^5.0.0",
+    "@angular/compiler": "^5.0.0",
+    "@angular/core": "^5.0.0",
+    "@angular/platform-browser": "^5.0.0",
+    "@angular/platform-browser-dynamic": "^5.0.0",
+    "rxjs": "^5.5.2",
+    "typescript": "^2.6.1",
+    "webpack": "^3.8.1",
+    "zone.js": "^0.8.18"
+  }
+}
