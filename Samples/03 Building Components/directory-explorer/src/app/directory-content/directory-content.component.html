@@ -1,0 +1,9 @@
+<ul>
+    <li *ngIf="hasParent" (click)="up()">
+        [..]
+    </li>
+
+    <li *ngFor="let item of items" (click)="select(item)">
+        <span>{{item.name}}</span>
+    </li>
+</ul>

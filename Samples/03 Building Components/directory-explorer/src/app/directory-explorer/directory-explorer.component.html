@@ -1,0 +1,13 @@
+<h1>{{path}}</h1>
+
+<app-directory-content
+    [hasParent]="hasParent()"
+    [items]="items"
+    *ngIf="items"
+    (onSelect)="select($event)"
+    (onUp)="up()">
+</app-directory-content>
+
+<div *ngIf="!items">
+    Loading ...
+</div>
