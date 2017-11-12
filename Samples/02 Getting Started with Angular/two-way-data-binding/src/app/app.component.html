@@ -1,0 +1,11 @@
+<h1>Hello Angular 5</h1>
+
+<div>
+  <!--<app-clock [format]="clockFormat" (formatChange)="onFormatChange($event)"></app-clock>-->
+  <app-clock #clock1 [(format)]="clockFormat"></app-clock>
+</div>
+
+<div>
+  <button (click)="changeFormat()">Change Format</button>
+  <button (click)="stopClock()">Stop</button>
+</div>

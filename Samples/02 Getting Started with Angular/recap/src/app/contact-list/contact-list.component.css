@@ -1,0 +1,9 @@
+ul {
+  padding: 0;
+  marging: 0;
+}
+
+li:hover {
+  background-color: lightblue;
+}
+
