@@ -1,0 +1,15 @@
+<h1>Change Detection</h1>
+
+<div>{{counter}}</div>
+
+<div>
+  <button (click)="noop()">Noop</button>
+</div>
+
+<ul>
+  <li *ngFor="let contact of contacts">
+    <span>{{getDisplayName(contact)}}</span>
+    <span>{{contact.displayName}}</span>
+  </li>
+</ul>
+
