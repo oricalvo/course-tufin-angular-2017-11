@@ -1,0 +1,8 @@
+Angular - Data binding Framework for building DOM
+Angular CLI - Command line tool (Optional). For creating new angular project
+Webpack - Build tool (Many JavaScript) ==> Bundle
+JavaScript - Prog Lang (the only one)
+CJS Modules - Speficiation for writing modules in JavaScript
+Typescript - Compiler/Transpiler (ES6 + Extensions) --> ES5 
+NodeJS - Optional. Competitor Java/.NET
+EcmaScript 5 vs. 6 - 

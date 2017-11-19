@@ -1,0 +1,11 @@
+<div *ngIf="refreshing">
+  Refreshing ...
+</div>
+
+<ul *ngIf="!refreshing">
+	<li *ngFor="let contact of contacts">
+    <app-contact-item [contact]="contact"
+                      (onDelete)="onContactDelete($event)">
+    </app-contact-item>
+	</li>
+</ul>
