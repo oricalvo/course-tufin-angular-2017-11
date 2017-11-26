@@ -1,9 +1,17 @@
-import { Injectable } from '@angular/core';
+import {Injectable, InjectionToken} from '@angular/core';
+import {HttpService} from "./http.service";
 
-@Injectable()
+function MyBlabla() {
+  return function(target) {
+  }
+}
+
+//@Injectable()
+//@MyBlabla()
 export class ContactService {
+  static parameters = [HttpService];
 
-  constructor() {
+  constructor(http: HttpService) {
     console.log("ContactService.ctor");
   }
 
@@ -17,8 +25,31 @@ export class ContactService {
   }
 }
 
+// export class ContactServiceEx {
+//   getAll(): Contact[] {
+//     return [
+//       {"id": 1, "name": "Ori"},
+//       {"id": 2, "name": "Roni"},
+//     ];
+//   }
+// }
+
 export interface Contact {
   id: number;
   name: string;
 }
 
+export function contactServiceFactory(http: HttpService) {
+  console.log("factory", http);
+
+  return new ContactService(null);
+}
+
+//export const TOKEN = "XXX";
+export const TOKEN = new InjectionToken<ContactService>("XXX");
+
+export const CONTACT_PROVIDER = {
+  provide: TOKEN,
+  useFactory: contactServiceFactory,
+  deps: [HttpService]
+};
